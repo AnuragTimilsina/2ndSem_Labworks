@@ -17,6 +17,7 @@ int main()
     t1.setCentroid(5,5);
     t1.move(5, 5);
     t1.display();
+    std::cout<< "(Rt.Triangle?):" <<t1.isRightTriangle();
     std::cout << std::endl;
 
     //Rectangle
