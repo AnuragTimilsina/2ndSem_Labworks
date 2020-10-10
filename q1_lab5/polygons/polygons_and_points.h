@@ -38,23 +38,35 @@ public:
 class triangle : public polygon
 {
 public:
-    float area, perimeter;
-    triangle(int x, int y)
+    float length1, length2, length3;
+    float area = 0, perimeter = 0;
+    triangle(const float length1,const float length2, const float length3)
     {
         this->numOfSides = 3;
-        this->centroid.x = x;
-        this->centroid.y = y;
+        this->length1 = length1;
+        this->length2 = length2;
+        this->length3 = length3;
     }
+    float calcArea();
+    float calcPerimeter();
+    bool isRightTriangle();
+    void setCentroid(const int x, const int y);
+    void display();
 };
 
 class rectangle : public polygon
 {
     public:
-        float area, perimeter;
-        rectangle(int x, int y)
+        float length, breadth;
+        float area = 0, perimeter = 0;
+        rectangle(const float length,const float breadth)
         {
             this->numOfSides = 4;
-            this->centroid.x = x;
-            this->centroid.y = y;
+            this->length = length;
+            this->breadth = breadth;
         }
+        float calcArea();
+        float calcPerimeter();
+        void setCentroid(const int x, const int y);
+        void display();
 };
